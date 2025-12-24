@@ -27,8 +27,8 @@ app.use('/api/user',UserRoutes)
 app.use('/api/post',PostRoutes)
 app.use('/api/comment',CommentRoutes)
 
-app.listen(process.env.PORT ||3000, () => {
+app.listen(PORT, () => {
     connectMongoDB();
-    console.log(`Server is running on port ${PORT}...`);
+    console.log(`Server is running on port ${process.env.PORT}...`);
 });
 
