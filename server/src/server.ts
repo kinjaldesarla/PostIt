@@ -10,7 +10,7 @@ import cors, { CorsOptions } from "cors";
 const app: Application = express();
 
 const corsOptions: CorsOptions = {
-  origin: "http://localhost:5173", 
+  origin: "https://post-it-0bjt.onrender.com", 
   credentials: true, 
 };
 
