@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Sidebar } from "../components/Sidebar";
 import {
-  Grid,
-  Bookmark,
+ 
   Heart,
   MessageCircle,
   X,
 } from "lucide-react";
-import { useNavigate, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import axiosInstance from "../utils/AxiosInstances";
 import { toast } from "react-toastify";
 import type { Notify, UserProfile } from "../types/User";
 import axios from "axios";
-import PostCarousel from "../components/PostCarousel";
 import PostModal from "../components/PostModal";
 
 

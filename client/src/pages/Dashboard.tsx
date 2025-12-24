@@ -4,12 +4,8 @@ import { Sidebar } from "../components/Sidebar";
 import {
   Heart,
   MessageCircle,
-  Send,
-  Bookmark,
-  MoreHorizontal,
   X,
 } from "lucide-react";
-import CreatePost from "../components/Createpost";
 import axiosInstance from "../utils/AxiosInstances";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
@@ -23,7 +19,6 @@ const Dashboard: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
   const [likedPosts, setLikedPosts] = useState<Set<string>>(new Set());
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [createType, setCreateType] = useState<"post" | "story" | null>(null);
   const [selectedPost, setSelectedPost] = useState<Post | null>(null);
   const [newComment, setNewComment] = useState("");
   const currentuserId = localStorage.getItem("userid");

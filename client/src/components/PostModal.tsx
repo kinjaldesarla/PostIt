@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Heart, MessageCircle, X } from "lucide-react";
+import React, {  useState } from "react";
+import { Heart, X } from "lucide-react";
 import axiosInstance from "../utils/AxiosInstances";
 import { toast } from "react-toastify";
 import { formatTimeAgo } from "../utils/FormatTime";
@@ -18,7 +18,6 @@ interface PostModalProps {
 const PostModal: React.FC<PostModalProps> = ({
   post,
   onClose,
-  refresh,
   currentUserId,
   deletePost,
    onUpdatePost
