@@ -19,7 +19,7 @@ type ProfileTab = "posts" | "saved";
 type FollowStatus = "none" | "requested" | "following";
 
 const UserProfilePage: React.FC = () => {
-  const [profileTab, setProfileTab] = useState<ProfileTab>("posts");
+  const [profileTab, _setProfileTab] = useState<ProfileTab>("posts");
   const [followStatus, setFollowStatus] = useState<FollowStatus>("none");
   const [modalFollowStatus, setModalFollowStatus] = useState<Record<string, FollowStatus>>({});
   const { searchUserId } = useParams<{ searchUserId: string }>();
@@ -298,8 +298,8 @@ const updatePostInGrid = (updatedPost: any) => {
   };
 
   // Add these states at the top of your component
-const [newComment, setNewComment] = useState<string>(""); // For comment input
-const [comments, setComments] = useState<string[]>([]); // Local copy of comments
+
+const [_comments, setComments] = useState<string[]>([]); // Local copy of comments
 
 // Update fetchUserProfile to set comments for selectedPost if needed
 useEffect(() => {

@@ -194,7 +194,7 @@ const handleCreatePostSubmit = async (formData: FormData) => {
 
   const handleConfirmFollow=async(requestId:string)=>{
     try {
-       const response =await axiosInstance.patch(`user/accept-request/${requestId}`,{},{withCredentials:true})
+      await axiosInstance.patch(`user/accept-request/${requestId}`,{},{withCredentials:true})
        setNotifications((prev) =>
       prev.map((notif) =>
         notif._id === requestId ? { ...notif, status: "accepted" } : notif

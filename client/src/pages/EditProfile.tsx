@@ -18,7 +18,7 @@ const EditProfile: React.FC = () => {
     confirmPassword: "",
   });
 
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [_isCollapsed, setIsCollapsed] = useState(false);
   const [showPasswordSection, setShowPasswordSection] = useState(false);
   const navigate = useNavigate();
 

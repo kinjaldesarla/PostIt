@@ -26,11 +26,11 @@ const ProfilePage: React.FC = () => {
     posts: [],
     totalPost: 0,
   });
-  const [profileTab, setProfileTab] = useState<ProfileTab>('posts');
+  const [profileTab, _setProfileTab] = useState<ProfileTab>('posts');
   const [selectedPost, setSelectedPost] = useState<Post | null>(null);
   const [showPostModal, setShowPostModal] = useState(false);
   const [activeModal, setActiveModal] = useState<'followers' | 'following' | null>(null);
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [_isCollapsed, setIsCollapsed] = useState(false);
   const navigate = useNavigate();
 
 
