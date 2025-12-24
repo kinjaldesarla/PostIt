@@ -1,7 +1,7 @@
 import axios, { type InternalAxiosRequestConfig } from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://post-it-0bjt.onrender.com/api",
+  baseURL: "https://post-it-0bjt.onrender.com/api/",
   withCredentials: true,
 });
 
